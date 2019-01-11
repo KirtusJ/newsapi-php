@@ -1,27 +1,37 @@
 # newsapi-scraper
 A PHP Package for the [News API](https://newsapi.org/docs/)
 
+composer require kirtusj/newsapi
+
+# Usage
+
+	use kirtusj\newsapi\Scraper;
+	$newsapi = new Scraper($api_key="api_key");
+	$top = $newsapi->get_top(array("q" => "obama"));
+	echo $top;
+	
+
 # Endpoints
 
 Endpoints return a JSON Object based on the input you give them
 
-## query_top
+## get_top
 
 	"top" : "https://newsapi.org/v2/top-headlines"
 
 ### options
 
-query, sources, language, country, pageSize, page
+q, sources, language, country, pageSize, page
   
-## query_everything
+## get_everything
 
     "everything" : "https://newsapi.org/v2/everything"
 
 ### options
 
-query, sources, language, domains, excludeDomains, from, to, sort, pageSize, page
+q, sources, language, domains, excludeDomains, from, to, sort, pageSize, page
  
-## query_sources:
+## get_sources:
 
 	 "sources" : "https://newsapi.org/v2/sources"
    
@@ -56,7 +66,7 @@ Must be structured in YYYY-MM-DD format
 
 ### Input types
 
-      "query" : str
+      "q" : str
       "sources" : str
       "language" : str
       "country" : str

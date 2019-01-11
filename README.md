@@ -5,11 +5,34 @@ composer require kirtusj/newsapi
 
 # Usage
 
+	require __DIR__.'/vendor/autoload.php';
 	use kirtusj\newsapi\Scraper;
-	$newsapi = new Scraper($api_key="api_key");
-	$top = $newsapi->get_top(array("q" => "obama"));
-	echo $top;
+
+### everything
+
+	$all_articles = $newsapi->get_everything(array(
+							'q' => 'bitcoin', 
+							'sources' => 'bbc-news,the-verge',
+							'domains' => 'bbc.co.uk,techcrunch.com',
+							'language' => 'en',
+							'sortBy' => 'relevancy',
+							'page' => 2));
+		
+### top
+
+	$top_articles = $newsapi->get_top(array(
+						'q' => 'bitcoin',
+						'sources' => 'bbc-news, the-verge',
+						'category' => 'business',
+						'language' => 'en',
+						'country' => 'us'));
+			
+### sources
+
+	$sources = $newsapi->get_sources(array());
 	
+The information held in these variables can be used however you like.
+
 
 # Endpoints
 

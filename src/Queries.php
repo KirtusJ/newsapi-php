@@ -1,12 +1,13 @@
 <?php namespace kirtusj\newsapi;
 
 /**
-*  A sample class
+*  Queries Class
 *
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
+*  This class is used to collection information from Scraper Class
+*  That information will be validated through the Constants Class
+*  And dispatched back to the payload
 *
-*  @author yourname
+*  @author kirtusj
 */
 
 use kirtusj\newsapi\Constants;

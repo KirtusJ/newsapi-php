@@ -1,12 +1,15 @@
 <?php namespace kirtusj\newsapi;
 
 /**
-*  A sample class
+*  Scraper Class
 *
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
+*  This class is the main entry for collecting and sending information to and from the client.
+*  Has the following methods:
+*   get_top(query, sources, language, country, pageSize, page)
+*   get_everything(query, sources, language, domains, excludeDomains, fromDate, toDate, sortBy, pageSize, page)
+*   get_sources(category, country, language)
 *
-*  @author yourname
+*  @author kirtusj
 */
 
 use kirtusj\newsapi\Queries;

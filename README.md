@@ -1,5 +1,5 @@
 # newsapi-scraper
-A PHP Package for the [News API](https://newsapi.org/docs/)
+A PHP Package for the [NewsAPI](https://newsapi.org/docs/) utility
 
 # Installation
 

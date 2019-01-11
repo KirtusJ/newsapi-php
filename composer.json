@@ -1,0 +1,24 @@
+{
+    "name": "kirtusj/newsapi",
+    "description": "A package for utilizing the NewsApi service",
+    "keywords": ["newsapi", "news", "api", "json", "scrape", "query"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kirtus Justus",
+            "email": "kirtusjustus@outlook.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "kirtusj\\newsapi\\": "src/"
+        }
+    }
+}

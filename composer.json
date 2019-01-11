@@ -1,6 +1,6 @@
 {
     "name": "kirtusj/newsapi",
-    "description": "A package for utilizing the NewsApi service",
+    "description": "A PHP Library for utilizing the NewsApi service",
     "keywords": ["newsapi", "news", "api", "json", "scrape", "query"],
     "license": "MIT",
     "authors": [

@@ -30,7 +30,7 @@ class Queries {
       $payload['q'] = $query;
       return $payload;
     } else {
-      throw new InvalidArgumentException("Query must be type: string");
+      throw new \InvalidArgumentException("Query must be type: string");
     }
   }
   public function get_sources($sources, $payload) {
@@ -38,7 +38,7 @@ class Queries {
       $payload['sources'] = $sources;
       return $payload;
     } else {
-      throw new InvalidArgumentException("Sources must be type: string");
+      throw new \InvalidArgumentException("Sources must be type: string");
     }
   }
   public function get_language($language, $payload) {
@@ -47,10 +47,10 @@ class Queries {
         $payload['language'] = $language;
         return $payload;
       } else {
-        throw new UnexpectedValueException("Language: ".$language." not found");
+        throw new \UnexpectedValueException("Language: ".$language." not found");
       }
     } else {
-      throw new InvalidArgumentException("Language must be type: string");
+      throw new \InvalidArgumentException("Language must be type: string");
     }
   }
   public function get_country($country, $payload) {
@@ -59,10 +59,10 @@ class Queries {
         $payload['country'] = $country;
         return $payload;
       } else {
-        throw new UnexpectedValueException("Country: ".$country." not found");
+        throw new \UnexpectedValueException("Country: ".$country." not found");
       }
     } else {
-      throw new InvalidArgumentException("Country must be type: string");
+      throw new \InvalidArgumentException("Country must be type: string");
     }
   }
   public function get_page_size($pageSize, $payload) {
@@ -70,7 +70,7 @@ class Queries {
       $payload['pageSize'] = $pageSize;
       return $payload;
     } else {
-      throw new InvalidArgumentException("pageSize must be type: int");
+      throw new \InvalidArgumentException("pageSize must be type: int");
     }
   }
   public function get_page_count($page, $payload) {
@@ -78,7 +78,7 @@ class Queries {
       $payload['page'] = $page;
       return $payload;
     } else {
-      throw new InvalidArgumentException("page must be type: int");
+      throw new \InvalidArgumentException("page must be type: int");
     }
   }
   public function get_domains($domain, $payload, $verse) {
@@ -86,7 +86,7 @@ class Queries {
       $payload[$verse] = $domain;
       return $payload;
     } else {
-      throw new InvalidArgumentException("Domain must be type: string");
+      throw new \InvalidArgumentException("Domain must be type: string");
     }
   }
   public function get_date($date, $payload, $verse) {
@@ -95,10 +95,10 @@ class Queries {
         $payload[$verse] = $date;
         return $payload;
       } else {
-        throw new InvalidArgumentException("Date must be ISO 8601 Format");
+        throw new \InvalidArgumentException("Date must be ISO 8601 Format");
       }
     } else {
-      throw new InvalidArgumentException("Date must be type: string");
+      throw new \InvalidArgumentException("Date must be type: string");
     }
   }
   public function get_sort($sort, $payload) {
@@ -107,10 +107,10 @@ class Queries {
         $payload['sortBy'] = $sort;
         return $payload;
       } else {
-        throw new UnexpectedValueException("Sort type: ".$sort." not found");
+        throw new \UnexpectedValueException("Sort type: ".$sort." not found");
       }
     } else {
-      throw new InvalidArgumentException("Sort must be type: string");
+      throw new \InvalidArgumentException("Sort must be type: string");
     }
   }
   public function get_category($category, $payload) {
@@ -119,10 +119,10 @@ class Queries {
         $payload['category'] = $category;
         return $payload;
       } else {
-        throw new UnexpectedValueException("Category: ".$category." not found");
+        throw new \UnexpectedValueException("Category: ".$category." not found");
       }
     } else {
-      throw new InvalidArgumentException("Category must be type: string");
+      throw new \InvalidArgumentException("Category must be type: string");
     }
   }
 }

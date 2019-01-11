@@ -1,7 +1,9 @@
 # newsapi-scraper
 A PHP Package for the [News API](https://newsapi.org/docs/)
 
-composer require kirtusj/newsapi
+# Installation
+
+	composer require kirtusj/newsapi
 
 # Usage
 

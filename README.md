@@ -7,6 +7,7 @@ composer require kirtusj/newsapi
 
 	require __DIR__.'/vendor/autoload.php';
 	use kirtusj\newsapi\Scraper;
+	$newsapi = new Scraper($api_key="your_api_key_here");
 
 ### everything
 

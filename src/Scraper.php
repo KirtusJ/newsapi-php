@@ -41,7 +41,7 @@ class Scraper {
     if (isset($args['sortBy'])) $payload = $this->queries->get_sort($args['sortBy'], $payload);
     if (isset($args['pageSize'])) $payload = $this->queries->get_page_size($args['pageSize'], $payload);
     if (isset($args['page'])) $payload = $this->queries->get_page_count($args['page'],$payload);
-    return $this->queries->connect($this->queries->constants->urls['top'], $payload, $this->api_key);
+    return $this->queries->connect($this->queries->constants->urls['everything'], $payload, $this->api_key);
   }
   public function get_sources($args) {
     $payload = [];

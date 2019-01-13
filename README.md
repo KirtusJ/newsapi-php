@@ -36,6 +36,22 @@ A PHP Package for the [NewsAPI](https://newsapi.org/docs/) utility
 	
 The information held in these variables can be used however you like.
 
+# Example
+
+### input
+
+	$query = "Canada";
+	$page = 1;
+	$pageSize = 3;
+	$language = 'en';
+
+	$top_articles = $newsapi->get_top(array('q' => $query, 'page' => $page, 'pageSize' => $pageSize, 'language' => $language));
+
+	echo $top_articles;
+	
+### output
+
+	{"status":"ok","totalResults":30,"articles":[{"source":{"id":"nhl-news","name":"NHL 	News"},"author":null,"title":"'Hockey Night in Canada': 5 Storylines","description":"The Boston Bruins and Toronto Maple Leafs will play for the fourth and final time during the regular season at Scotiabank Arena as part of a \"Hockey Night in Canada\" doubleheader on Saturday (7 p.m. ET; NHLN, CBC, SN1, CITY, NESN, NHL.TV). The home team has w…","url":"https://www.nhl.com/news/hockey-night-in-canada-5-storylines-january-12/c-303810292","urlToImage":"https://nhl.bamcontent.com/images/photos/303810922/1024x576/cut.jpg","publishedAt":"2019-01-13T00:56:28.3635098Z","content":"The Boston Bruins and Toronto Maple Leafs will play for the fourth and final time during the regular season at Scotiabank Arena as part of a \"Hockey Night in Canada\" doubleheader on Saturday (7 p.m. ET; NHLN, CBC, SN1, CITY, NESN, NHL.TV). The home team has w… [+4309 chars]"}]}
 
 # Endpoints
 

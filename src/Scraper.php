@@ -20,6 +20,23 @@ class Scraper {
     $this->queries = new Queries();
   }
   public function get_top($args) {
+    /**
+    
+    Collects arguments from an array and sends the arguments to Queries for validation.
+    If the arguments are validated, they will be dispatched to the payload.
+    The payload is sent to the function connect which will return a JSON object returned from newsapi.org
+
+    Arguments:
+    q - Sets the query arg sent to NewsApi
+    sources - Sets the sources sent to NewsApi
+    country - Sets the country sent to NewsApi
+    pageSize - Sets the size of the pages sent to NewsApi
+    page - Sets the amount of pages sent to NewsApi
+
+    Dispatch:
+    The Applicable arguments assigned to the payload will be dispatched with the connect() function, and validated with the API_KEY.
+
+    **/
     $payload = [];
     if (isset($args['q'])) $payload = $this->queries->get_query($args['q'], $payload);
     if (isset($args['sources'])) $payload = $this->queries->get_sources($args['sources'], $payload);
@@ -30,6 +47,25 @@ class Scraper {
     return $this->queries->connect($this->queries->constants->urls['top'], $payload, $this->api_key);
   }
   public function get_everything($args) {
+    /**
+    Collects arguments from an array and sends the arguments to Queries for validation.
+    If the arguments are validated, they will be dispatched to the payload.
+    The payload is sent to the function connect which will return a JSON object returned from newsapi.org
+
+    Arguments:
+    q - Sets the query arg sent to NewsApi
+    sources - Sets the sources sent to NewsApi
+    domains - Sets the domains sent to NewsApi
+    excludeDomains - Sets the domains that will not be returned by NewsApi
+    from - Sets the date which the NewsApi return will begin at
+    to - Sets the date which the NewsApi return will end at
+    sortBy - Sets the sort type sent to NewsApi
+    pageSize - Sets the size of the pages sent to NewsApi
+    page - Sets the amount of pages sent to NewsApi
+    
+    Dispatch:
+    The Applicable arguments assigned to the payload will be dispatched with the connect() function, and validated with the API_KEY.
+    **/
     $payload = [];
     if (isset($args['q'])) $payload = $this->queries->get_query($args['q'], $payload);
     if (isset($args['sources'])) $payload = $this->queries->get_sources($args['sources'], $payload);
@@ -44,6 +80,19 @@ class Scraper {
     return $this->queries->connect($this->queries->constants->urls['everything'], $payload, $this->api_key);
   }
   public function get_sources($args) {
+    /**
+    Collects arguments from an array and sends the arguments to Queries for validation.
+    If the arguments are validated, they will be dispatched to the payload.
+    The payload is sent to the function connect which will return a JSON object returned from newsapi.org
+   
+    Arguments:
+    category - Sets the category sent to NewsApi
+    country - Sets the country sent to NewsApi
+    language - Sets the language sent to NewsApi
+    
+    Dispatch:
+    The Applicable arguments assigned to the payload will be dispatched with the connect() function, and validated with the API_KEY.
+    **/
     $payload = [];
     if (isset($args['category'])) $payload = $this->queries->get_category($args['category'], $payload);
     if (isset($args['country'])) $payload = $this->queries->get_country($args['country'], $payload);

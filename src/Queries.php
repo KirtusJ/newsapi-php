@@ -23,6 +23,7 @@ class Queries {
       'Authorization: ' . $key
     ));
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
     return curl_exec($curl);
   }
   public function get_query($query, $payload) {

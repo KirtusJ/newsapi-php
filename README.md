@@ -108,14 +108,14 @@ Must be structured in YYYY-MM-DD format
 
 ### Input types
 
-      "q" : str
-      "sources" : str
-      "language" : str
-      "country" : str
+      "q" : string
+      "sources" : string
+      "language" : string
+      "country" : string
       "pageSize" : int
       "page" : int
-      "domains" : str
-      "date" : str
-      "sortBy" : str
+      "domains" : string
+      "date" : string
+      "sortBy" : string
       "category" : str
  
